@@ -8,13 +8,12 @@ import Checkbox from "./inputs/checkbox";
 export default function Todo({ todo, refreshData }) {
     const [updating, setUpdating] = useState(false);
     const [detailView, setDetailView] = useState(false);
-    const [completed, setCompleted] = useState(todo.completed);
 
     const deleteTodoFromList = async (event) => {
         event.preventDefault();
 
         try {
-            const body = { id: todo.id };
+            const body = { id: todo.id, action: "DELETE_ONE" };
             await fetch(`/api/todos/delete`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
@@ -28,9 +27,9 @@ export default function Todo({ todo, refreshData }) {
 
     const updateCompleted = async (event) => {
         event.preventDefault();
-        setCompleted(!todo.completed);
+
         try {
-            const body = { id: todo.id, title: todo.title, detail: todo.detail, completed };
+            const body = { id: todo.id, title: todo.title, detail: todo.detail, completed: !todo.completed };
             await fetch(`/api/todos/update`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
