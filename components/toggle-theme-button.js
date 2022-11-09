@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const ToggleThemeButton = () => {
     const { theme, setTheme } = useTheme();
@@ -16,7 +17,13 @@ const ToggleThemeButton = () => {
             type="button"
             onClick={() => setTheme(toggle.mode)}
         >
-            <img className="h-5 sm:h-7 w-5 sm:w-7" src={`/icon-${toggle.icon}.svg`} alt={toggle.icon} />
+            <Image
+                className="h-5 sm:h-7 w-5 sm:w-7"
+                src={`/icon-${toggle.icon}.svg`}
+                width="26"
+                height="26"
+                alt={toggle.icon}
+            />
         </button>
     );
 };

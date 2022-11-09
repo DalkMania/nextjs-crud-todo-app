@@ -36,7 +36,7 @@ export default function Home({ currentTodos }) {
         setAllTodos(currentTodos);
         setActiveTodos(currentTodos?.filter((todo) => !todo.completed));
         setCompletedTodos(currentTodos?.filter((todo) => todo.completed));
-    }, []);
+    }, [currentTodos]);
 
     return (
         <Fragment>
