@@ -12,7 +12,7 @@ const EditForm = ({ todo, updateSetter, refreshData }) => {
     const editTodo = async (event) => {
         event.preventDefault();
         try {
-            const body = { id: todo.id, title, detail, completed, action: "DELETE_ONE" };
+            const body = { id: todo.id, title, detail, completed };
             await fetch(`/api/todos/update`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
