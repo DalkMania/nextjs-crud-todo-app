@@ -7,6 +7,7 @@ import Footer from "../components/layout/footer";
 import Filter from "../components/filter";
 import { getSession, useSession } from "next-auth/react";
 import { makeSerializable } from "../utils";
+import { prisma } from "../prisma/client";
 
 export default function Home({ currentTodos }) {
     const { data: session } = useSession();
