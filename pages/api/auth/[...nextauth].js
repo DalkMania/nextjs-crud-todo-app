@@ -13,7 +13,8 @@ export const authOptions = {
     ],
     pages: {
         signIn: "/auth/signin"
-    }
+    },
+    secret: process.env.NEXTAUTH_SECRET
 };
 
 export default NextAuth(authOptions);
