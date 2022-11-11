@@ -1,6 +1,6 @@
 # A Simple CRUD Todo App
 
-This is an application based on the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is an application based on the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects. I extended the challenge by adding some extra fields and functionality. Such as authorization, login with google. I did this, to be able to have multiple users.
 
 ## Overview
 
@@ -37,3 +37,13 @@ Users should be able to:
 ### What I learned
 
 This project was a good practice to test my React and Tailwind CSS skills. First time, I used NextAuth.js, Prisma and Supabase. To build a feature complete CRUD application.
+
+## How to use
+
+1. `git clone git@github.com:DalkMania/nextjs-crud-todo-app.git`
+2. `cd nextjs-crud-todo-app`
+3. `npm install`
+4. Copy the `env.example` file to `.env`
+5. Put your API keys for the different services in the `.env` file
+6. `npm run dev`
+7. Visit `http://localhost:3000/`
