@@ -30,7 +30,7 @@ Users should be able to:
 -   [Next.js](https://nextjs.org/)
 -   [NextAuth.js](https://next-auth.js.org/)
 -   [Tailwind CSS](https://tailwindcss.com/)
--   [Supabase](https://supabase.com/)
+-   [Neon DB](https://neon.tech/)
 -   [Prisma](https://www.prisma.io/)
 -   [Netlify](https://netlify.com/)
 
@@ -45,5 +45,6 @@ This project was a good practice to test my React and Tailwind CSS skills. First
 3. `npm install`
 4. Copy the `env.example` file to `.env`
 5. Put your API keys for the different services in the `.env` file
-6. `npm run dev`
-7. Visit `http://localhost:3000/`
+6. Run `npx prisma migrate dev`
+7. `npm run dev`
+8. Visit `http://localhost:3000/`
